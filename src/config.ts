@@ -6,7 +6,7 @@ export const siteConfig = {
   social: {
     email: "kontakt@freelanceit.tech",
     linkedin: "https://linkedin.com/in/murtic",
-    github: "https://github.com/RyanFitzgerald",
+    github: "https://github.com/freelanceit-tech",
   },
   aboutMe:
     "Ich liebe alles rund um IT – besonders, wenn es darum geht, für komplexe Probleme smarte Lösungen zu finden. In der Cloud und mit modernen Technologien bin ich in meinem Element.\n" +
