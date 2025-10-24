@@ -9,7 +9,11 @@ export const siteConfig = {
     github: "https://github.com/RyanFitzgerald",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
+    "Ich liebe alles rund um IT – besonders, wenn es darum geht, für komplexe Probleme smarte Lösungen zu finden. In der Cloud und mit modernen Technologien bin ich in meinem Element.\n" +
+      "\n" +
+      "Ich lerne schnell, tauche gerne in neue Themen ein und habe Spaß daran, mich in unbekannte Gebiete einzuarbeiten. Durch meine breite Erfahrung kann ich mich flexibel einbringen und Projekte mit frischen Ideen und technischem Know-how voranbringen.\n" +
+      "\n" +
+      "Wenn du vor einer technischen Herausforderung stehst oder dich einfach über spannende IT-Themen austauschen möchtest – schreib mir gerne!",
   skills: ["AWS", "Kubernetes", "Golang", "IT Architecture (Software/Infrastruktur)", "DevOps", "Microservices", "GitOps", "CI/CD", "Monitoring and Logging", "Agile Methodologies", "Infrastructure As Code"],
   projects: [
       {
