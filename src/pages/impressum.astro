@@ -1,0 +1,48 @@
+---
+import CModal from '../components/CustomModal.astro';
+import { siteConfig } from '../config';
+---
+
+<CModal id="impressum-modal" title="Impressum">
+    <div style="width:100%;margin-bottom: 1em;">
+        <h3 style="font-weight: bold">Angaben gemäß § 5 DDG</h3>
+        {siteConfig.name}<br/>
+        c/o Impressumservice Dein-Impressum<br/>
+        Stettiner Straße 41<br/>
+        35410 Hungen
+    </div>
+
+    <div style="width:100%;margin-bottom: 1em;">
+        <b>Vertreten durch</b>: {siteConfig.name}
+    </div>
+
+    <div style="width:100%;margin-bottom: 1em;">
+        <b>Kontakt</b><br/>
+        Email: <a href={"mailto:" + siteConfig.social.email} class="text-blue-600 hover:underline">{siteConfig.social.email}</a><br/>
+        Tel.: <a href="tel:06183 8039368" class="text-blue-600 hover:underline">06183 8039368</a>
+    </div>
+
+    <div style="width:100%;margin-bottom: 1em;">
+        <b>Verbraucherstreitbeilegung / Universalschlichtungsstelle</b><br/>
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
+        einer Verbraucherschlichtungsstelle teilzunehmen.
+    </div>
+
+    <div style="width:100%;margin-bottom: 1em;">
+        <b>Urheberrecht</b><br/>
+        Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht.<br/>
+        Soweit Inhalte, Texte oder Bilder vom Betreiber selbst erstellt wurden, unterliegen diese dem deutschen Urheberrecht.<br/>
+        <br/>
+        Das Design und/oder Quellcode-Template dieser Website basiert auf einer Vorlage von [https://github.com/RyanFitzgerald/devportfolio], die unter der  MIT-Lizenz genutzt wird.<br/>
+        Die entsprechenden Lizenzbedingungen sind auf der Website des Anbieters einsehbar: <a target="_blank" href="https://github.com/RyanFitzgerald/devportfolio/blob/cc56cd59f7b1e3ad75fa6f5351bf7441ae049a7d/LICENSE.md" class="text-blue-600 hover:underline external-link">Link zur Lizenz</a><br/>
+        <br/>
+        Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Rechteinhabers.<br/>
+        <br/>
+        Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.<br/>
+        Soweit Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.<br/>
+        Insbesondere werden Inhalte Dritter als solche gekennzeichnet.<br/>
+        <br/>
+        Sollten Sie dennoch auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. <br/>
+        Bei Bekanntwerden von Rechtsverletzungen werden derartige Inhalte umgehend entfernt.
+    </div>
+</CModal>

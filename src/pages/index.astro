@@ -6,8 +6,11 @@ import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
+import CustomModal from "../components/CustomModal.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
+import Impressum from "./impressum.astro";
+import Datenschutz from "./datenschutz.astro";
 ---
 
 <html lang="en">
@@ -28,6 +31,8 @@ import "../styles/global.css";
   <body>
     <Header />
     <section>
+        <Impressum />
+        <Datenschutz />
       <Hero />
       <About />
       <Projects />

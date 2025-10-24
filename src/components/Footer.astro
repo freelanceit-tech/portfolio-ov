@@ -4,6 +4,8 @@ import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+
+const hasxSocialLinkTwitter = siteConfig.social && siteConfig.social.twitter;
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -49,7 +51,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)] external-link"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
             <svg
@@ -70,7 +72,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               ></path></svg
             >
           </a>
-          <a
+            {hasxSocialLinkTwitter && (
+            <a
             href={siteConfig.social.twitter}
             target="_blank"
             rel="noopener noreferrer"
@@ -93,13 +96,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                 d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
                 d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
             >
-          </a>
+          </a>)}
           <a
             href={siteConfig.social.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)] external-link"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
             <svg
@@ -124,40 +127,50 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
       <div class="hidden md:block flex flex-col md:items-end gap-4">
         <nav class="flex gap-x-8">
           <a
-            href="#about"
+            href={ siteConfig.menuItems.about.href }
             class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-            >About</a
+            >{ siteConfig.menuItems.about.label }</a
           >
           {
             hasProjects && (
               <a
-                href="#projects"
+                href={ siteConfig.menuItems.projects.href }
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Projects
+                  { siteConfig.menuItems.projects.label }
               </a>
             )
           }
           {
             hasExperience && (
               <a
-                href="#experience"
+                href={ siteConfig.menuItems.experience.href }
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Experience
+                  { siteConfig.menuItems.experience.label }
               </a>
             )
           }
           {
             hasEducation && (
               <a
-                href="#education"
+                href={ siteConfig.menuItems.education.href }
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Education
+                  { siteConfig.menuItems.education.label }
               </a>
             )
           }
+            <a
+                    href="#" data-modal-trigger="impressum-modal"
+                    class="text-sm text-gray-600 hover:text-gray-800 transition-colors">
+                Impressum
+            </a>
+            <a
+                    href="#" data-modal-trigger="ds-modal"
+                    class="text-sm text-gray-600 hover:text-gray-800 transition-colors">
+                Datenschutz
+            </a>
         </nav>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}

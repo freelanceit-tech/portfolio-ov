@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import Impressum from "./impressum.astro";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
@@ -14,20 +15,20 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
-          href="#about"
+          href={ siteConfig.menuItems.about.href }
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
-          About
+            { siteConfig.menuItems.about.label }
         </a>
       </li>
       {
         hasProjects && (
           <li>
             <a
-              href="#projects"
+              href={ siteConfig.menuItems.projects.href }
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
-              Projects
+                { siteConfig.menuItems.projects.label }
             </a>
           </li>
         )
@@ -36,10 +37,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         hasExperience && (
           <li>
             <a
-              href="#experience"
+              href={ siteConfig.menuItems.experience.href }
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
-              Experience
+                { siteConfig.menuItems.experience.label }
             </a>
           </li>
         )
@@ -48,14 +49,24 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         hasEducation && (
           <li>
             <a
-              href="#education"
+              href={ siteConfig.menuItems.education.href }
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
-              Education
+                { siteConfig.menuItems.education.label }
             </a>
           </li>
         )
       }
+        <li>
+            <a href="#" data-modal-trigger="impressum-modal" class="text-gray-700 hover:text-black transition-colors font-medium">
+                Impressum
+            </a>
+        </li>
+        <li>
+            <a href="#" data-modal-trigger="ds-modal" class="text-gray-700 hover:text-black transition-colors font-medium">
+                Datenschutz
+            </a>
+        </li>
     </ul>
   </nav>
 </header>

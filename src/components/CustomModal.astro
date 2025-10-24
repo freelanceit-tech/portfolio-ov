@@ -1,0 +1,16 @@
+---
+import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "free-astro-components";
+const { id, title } = Astro.props;
+---
+
+<Modal id={id} size="3xl">
+    <ModalHeader>
+        <h2 style="font-weight: bold;font-size: large">{title}</h2>
+    </ModalHeader>
+    <ModalBody>
+        <slot />
+    </ModalBody>
+    <ModalFooter>
+        <Button label="Schlileßen" data-modal-close />
+    </ModalFooter>
+</Modal>
