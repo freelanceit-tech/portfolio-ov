@@ -5,7 +5,7 @@ export const siteConfig = {
   accentColor: "#1d4ed8",
   social: {
     email: "kontakt@freelanceit.tech",
-    linkedin: "https://linkedin.com/in/dennismurtic",
+    linkedin: "https://linkedin.com/in/murtic",
     github: "https://github.com/RyanFitzgerald",
   },
   aboutMe:
